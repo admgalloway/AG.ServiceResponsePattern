@@ -1,4 +1,4 @@
-﻿namespace AG.Common.ServiceResponsePattern.Models
+﻿namespace AG.ServiceResponsePattern.Models
 {
     /// <summary>Defines an an action which a caller can carry out following the request they have just made. For example, this may
     /// a retry action for a failed request, or a follow-up action for new resources that has just been created, etc.

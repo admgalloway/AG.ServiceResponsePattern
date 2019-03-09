@@ -1,11 +1,11 @@
-﻿using AG.Common.ServiceResponsePattern.Enums;
-using AG.Common.ServiceResponsePattern.Extensions;
-using AG.Common.ServiceResponsePattern.Models;
+﻿using AG.ServiceResponsePattern.Enums;
+using AG.ServiceResponsePattern.Extensions;
+using AG.ServiceResponsePattern.Models;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AG.Common.ServiceResponsePattern.Tests.Extensions
+namespace AG.ServiceResponsePattern.Tests.Extensions
 {
     [TestFixture]
     public class ServiceResponseFactoryTests

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AG.Common.ServiceResponsePattern", "Src\AG.Common.ServiceResponsePattern\AG.Common.ServiceResponsePattern.csproj", "{1F681E22-7B9B-44E3-9686-13573F20E8C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AG.ServiceResponsePattern", "Src\AG.ServiceResponsePattern\AG.ServiceResponsePattern.csproj", "{1F681E22-7B9B-44E3-9686-13573F20E8C5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AG.Common.ServiceResponsePattern.Tests", "Tests\AG.Common.ServiceResponsePattern\AG.Common.ServiceResponsePattern.Tests.csproj", "{900A581C-8128-471B-9B7D-8123879A5DB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AG.ServiceResponsePattern.Tests", "Tests\AG.ServiceResponsePattern\AG.ServiceResponsePattern.Tests.csproj", "{900A581C-8128-471B-9B7D-8123879A5DB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

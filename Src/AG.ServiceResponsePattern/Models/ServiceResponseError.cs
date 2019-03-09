@@ -1,4 +1,4 @@
-﻿namespace AG.Common.ServiceResponsePattern.Models
+﻿namespace AG.ServiceResponsePattern.Models
 {
     /// <summary>Represents an error related to input from a caller (typically provided by a user).</summary>
     public class ServiceResponseError

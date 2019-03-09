@@ -1,10 +1,10 @@
-﻿using AG.Common.ServiceResponsePattern.Models;
+﻿using AG.ServiceResponsePattern.Models;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
-using AG.Common.ServiceResponsePattern.Extensions;
+using AG.ServiceResponsePattern.Extensions;
 
-namespace AG.Common.ServiceResponsePattern.Tests.Extensions
+namespace AG.ServiceResponsePattern.Tests.Extensions
 {
     [TestFixture]
     public class ServiceResponseExtensionTests

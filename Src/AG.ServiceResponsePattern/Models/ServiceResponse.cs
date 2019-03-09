@@ -1,7 +1,7 @@
-﻿using AG.Common.ServiceResponsePattern.Enums;
+﻿using AG.ServiceResponsePattern.Enums;
 using System.Collections.Generic;
 
-namespace AG.Common.ServiceResponsePattern.Models
+namespace AG.ServiceResponsePattern.Models
 {
     /// <summary>A wrapper around service methods to inform callers if the request was successful or not. 
     /// All exceptions within the service call should be logged, and the overall outcome of the method reported back to callers via the Result property.

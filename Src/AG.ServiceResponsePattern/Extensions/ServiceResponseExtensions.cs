@@ -1,8 +1,8 @@
-﻿using AG.Common.ServiceResponsePattern.Enums;
-using AG.Common.ServiceResponsePattern.Models;
+﻿using AG.ServiceResponsePattern.Enums;
+using AG.ServiceResponsePattern.Models;
 using System.Collections.Generic;
 
-namespace AG.Common.ServiceResponsePattern.Extensions
+namespace AG.ServiceResponsePattern.Extensions
 {
     /// <summary>Set of extension methods to help when using ServiceResponse.</summary>
     public static class ServiceResponseExtensions

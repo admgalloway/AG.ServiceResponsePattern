@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>The Service Response pattern is used for reporting results of a method or service call back to a caller in a consistent and usable interface. This package provides a collection of lightweight objects to implement the design pattern.</Description>
+    <Copyright>Adam Galloway</Copyright>
+    <PackageTags>ServiceResponse, DesignPattern</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0-beta</Version>
+    <PackageId>AG.ServiceResponsePattern</PackageId>
+  </PropertyGroup>
+
+</Project>

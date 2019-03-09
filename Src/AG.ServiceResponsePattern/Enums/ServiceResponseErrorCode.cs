@@ -1,4 +1,4 @@
-﻿namespace AG.Common.ServiceResponsePattern.Enums
+﻿namespace AG.ServiceResponsePattern.Enums
 {
     /// <summary>Defines a list of error codes to communicate common errors found in services, and communicated back to callers.</summary>
     /// <remarks>These are mapped to HTTP status codes for convience only, allowing for simpler wrapping at the API level.</remarks>
