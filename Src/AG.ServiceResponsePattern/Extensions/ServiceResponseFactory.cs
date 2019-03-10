@@ -75,59 +75,61 @@ namespace AG.ServiceResponsePattern.Extensions
         #region With type params
 
         /// <summary>Create a ServiceResponse for a request which completed successfully, and has content to return.</summary>
-        public static ServiceResponse<T> SuccessfulResponse<T>(T content)
+        public static ServiceResponse<ResponseType> SuccessfulResponse<ResponseType>(ResponseType content)
         {
-            return new ServiceResponse<T> { Result = ServiceResponseResult.Successful, Content = content };
+            return new ServiceResponse<ResponseType> { Result = ServiceResponseResult.Successful, Content = content };
         }
 
         /// <summary>Create a ServiceResponse for a request which failed because a requested resource could not be found.</summary>
-        public static ServiceResponse<T> FailedNotFoundResponse<T>()
+        public static ServiceResponse<ResponseType> FailedNotFoundResponse<ResponseType>()
         {
-            return Response<T>(ServiceResponseResult.Failed, ServiceResponseErrorCode.NotFound);
+            return Response<ResponseType>(ServiceResponseResult.Failed, ServiceResponseErrorCode.NotFound);
         }
 
         /// <summary>Create a ServiceResponse for a request which failed because the called was not authorized.</summary>
-        public static ServiceResponse<T> FailedAuthorizationResponse<T>()
+        public static ServiceResponse<ResponseType> FailedAuthorizationResponse<ResponseType>()
         {
-            return Response<T>(ServiceResponseResult.Failed, ServiceResponseErrorCode.AuthorizationError);
+            return Response<ResponseType>(ServiceResponseResult.Failed, ServiceResponseErrorCode.AuthorizationError);
         }
 
         /// <summary>Create a ServiceResponse for a request which failed because the called could not be authenticated.</summary>
-        public static ServiceResponse<T> FailedAuthenticationResponse<T>()
+        public static ServiceResponse<ResponseType> FailedAuthenticationResponse<ResponseType>()
         {
-            return Response<T>(ServiceResponseResult.Failed, ServiceResponseErrorCode.AuthenticationError);
+            return Response<ResponseType>(ServiceResponseResult.Failed, ServiceResponseErrorCode.AuthenticationError);
         }
 
         /// <summary>Create a ServiceResponse for a request which failed because of input from the caller.</summary>
-        public static ServiceResponse<T> FailedValidationResponse<T>(IList<ServiceResponseError> validationErrors)
+        public static ServiceResponse<ResponseType> FailedValidationResponse<ResponseType>(IList<ServiceResponseError> validationErrors)
         {
-            return Response<T>(ServiceResponseResult.Failed, ServiceResponseErrorCode.ValidationError, validationErrors);
+            return Response<ResponseType>(ServiceResponseResult.Failed, ServiceResponseErrorCode.ValidationError, validationErrors);
         }
 
         /// <summary>Create a ServiceResponse for a request which failed because of input from the caller.</summary>
         /// <remarks>This method only returns a single message in the Errors collection.</remarks>
-        public static ServiceResponse<T> FailedValidationResponse<T>(string fieldName, string validationErrorCode)
+        public static ServiceResponse<ResponseType> FailedValidationResponse<ResponseType>(string fieldName, string validationErrorCode)
         {
-            var serviceResponseErrors = new List<ServiceResponseError> { new ServiceResponseError(fieldName, validationErrorCode) };
-            return FailedValidationResponse<T>(serviceResponseErrors);
+            var validationErrors = new List<ServiceResponseError>{
+                new ServiceResponseError(fieldName, validationErrorCode)
+            };
+            return FailedValidationResponse<ResponseType>(validationErrors);
         }
 
         /// <summary>Create a Failed ServiceResponse using the supplied error code.</summary>
-        public static ServiceResponse<T> FailedResponse<T>(ServiceResponseErrorCode errorCode)
+        public static ServiceResponse<ResponseType> FailedResponse<ResponseType>(ServiceResponseErrorCode errorCode)
         {
-            return Response<T>(ServiceResponseResult.Failed, errorCode);
+            return Response<ResponseType>(ServiceResponseResult.Failed, errorCode);
         }
 
         /// <summary>Create a ServiceResponse where the request has failed due to a system fault such as a timeout, serialisation error, etc.</summary>
-        public static ServiceResponse<T> FailedResponse<T>()
+        public static ServiceResponse<ResponseType> FailedResponse<ResponseType>()
         {
-            return Response<T>(ServiceResponseResult.Failed, ServiceResponseErrorCode.SystemError);
+            return Response<ResponseType>(ServiceResponseResult.Failed, ServiceResponseErrorCode.SystemError);
         }
 
         /// <summary>Generic parameterised method for create all responses with a type param</summary>
-        private static ServiceResponse<T> Response<T>(ServiceResponseResult result, ServiceResponseErrorCode errorCode = ServiceResponseErrorCode.NoError, IList<ServiceResponseError> serviceResponseErrors = null)
+        private static ServiceResponse<ResponseType> Response<ResponseType>(ServiceResponseResult result, ServiceResponseErrorCode errorCode = ServiceResponseErrorCode.NoError, IList<ServiceResponseError> serviceResponseErrors = null)
         {
-            return new ServiceResponse<T>
+            return new ServiceResponse<ResponseType>
             {
                 Result = result,
                 ErrorCode = errorCode,
