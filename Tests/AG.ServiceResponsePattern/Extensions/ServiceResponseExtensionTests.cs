@@ -16,7 +16,7 @@ namespace AG.ServiceResponsePattern.Tests.Extensions
             var response = ServiceResponseFactory.SuccessfulResponse();
 
             // Act
-            var successful = response.WasSuccessful();
+            var successful = response.WasSuccessful;
 
             // Assert
             Assert.AreEqual(true, successful);
@@ -29,7 +29,7 @@ namespace AG.ServiceResponsePattern.Tests.Extensions
             var response = ServiceResponseFactory.FailedResponse();
 
             // Act
-            var successful = response.WasSuccessful();
+            var successful = response.WasSuccessful;
 
             // Assert
             Assert.AreEqual(false, successful);
@@ -42,7 +42,7 @@ namespace AG.ServiceResponsePattern.Tests.Extensions
             var response = ServiceResponseFactory.FailedResponse();
 
             // Act
-            var successful = response.WasUnsuccessful();
+            var successful = response.WasUnsuccessful;
 
             // Assert
             Assert.AreEqual(true, successful);
@@ -55,7 +55,7 @@ namespace AG.ServiceResponsePattern.Tests.Extensions
             var response = ServiceResponseFactory.SuccessfulResponse();
 
             // Act
-            var successful = response.WasUnsuccessful();
+            var successful = response.WasUnsuccessful;
 
             // Assert
             Assert.AreEqual(false, successful);
