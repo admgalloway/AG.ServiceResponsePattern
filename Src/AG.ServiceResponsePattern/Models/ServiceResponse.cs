@@ -9,7 +9,7 @@ namespace AG.ServiceResponsePattern.Models
     /// </summary>
     public partial class ServiceResponse
     {
-        /// <summary>Restrict creation of objects to internal usage - force consumers to use Factory to reliably populate object</summary>
+        /// <summary>Restrict creation of objects to internal project - consumers should use the ServiceResponseFactory to reliably populate object.</summary>
         internal ServiceResponse() { }
 
         /// <summary>Indicates if the request was successful or not.</summary>
@@ -38,7 +38,7 @@ namespace AG.ServiceResponsePattern.Models
     /// </summary>
     public partial class ServiceResponse<ResponseType> : ServiceResponse
     {
-        /// <summary>Restrict creation of objects to internal usage - force consumers to use Factory to reliably populate object</summary>
+        /// <summary>Restrict creation of objects to internal project - consumers should use the ServiceResponseFactory to reliably populate object.</summary>
         internal ServiceResponse() { }
 
         /// <summary>For successfull requests, this contains the content returned by the request.</summary>

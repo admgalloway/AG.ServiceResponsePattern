@@ -11,6 +11,8 @@
     <FileVersion>1.0.0.0</FileVersion>
     <Version>1.0.0-beta</Version>
     <PackageId>AG.ServiceResponsePattern</PackageId>
+    <Authors>Adam Galloway</Authors>
+    <Company>Adam Galloway</Company>
   </PropertyGroup>
 
 </Project>
