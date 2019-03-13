@@ -87,7 +87,7 @@ The ValidationError indicates that the input provided by a caller was invalid - 
 
 
 
-## Creating response objects with the ServiceResponseFactory
+## Creating responses with the ServiceResponseFactory
 
 The `ServiceResponseFactory` provides a quick and intuitive way of generating ServiceResponse objects, with support for responses that return content and those that do not.
 
