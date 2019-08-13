@@ -7,12 +7,19 @@ namespace AG.ServiceResponsePattern.Extensions
     /// <summary>Set of extension methods to help when using ServiceResponse.</summary>
     public static class ServiceResponseExtensions
     {
-        /// <summary>Helper method to make checking for successful responses cleaner</summary>
+        /// <summary>Helper method to simplify response checks. Outputs response value to an inline out var if successful</summary>
         /// <param name="content">If successful, the content will be passe to the referenced out param</param>
         public static bool WasSuccessful<ResponseType>(this ServiceResponse<ResponseType> response, out ResponseType content)
         {
             content = response.WasSuccessful ? response.Content : default(ResponseType);
+            return response.WasSuccessful;
+        }
 
+        /// <summary>Helper method to simplify response checks. Outputs response value to an inline out var if successful</summary>
+        /// <param name="content">If successful, the content will be passe to the referenced out param</param>
+        public static bool WasUnsuccessful<ResponseType>(this ServiceResponse<ResponseType> response, out ResponseType content)
+        {
+            content = response.WasSuccessful ? response.Content : default(ResponseType);
             return response.WasSuccessful;
         }
 
