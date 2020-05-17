@@ -32,9 +32,9 @@ namespace AG.ServiceResponsePattern.Extensions
 
 
         /// <summary>Build a ServiceResponseError and add it to the the supplied list</summary>
-        public static void Add(this IList<ServiceResponseError> serviceResponseError, string fieldName, string errorCode)
+        public static void Add(this IList<ServiceResponseError> serviceResponseError, string fieldName, object errorCode, string errorMessage)
         {
-            var errorToAdd = new ServiceResponseError(fieldName, errorCode);
+            var errorToAdd = new ServiceResponseError(fieldName, errorCode.ToString(), errorMessage);
             serviceResponseError.Add(errorToAdd);
         }
     }
