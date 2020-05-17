@@ -3,7 +3,7 @@
     /// <summary>Represents an error related to input from a caller (typically provided by a user).</summary>
     public class ServiceResponseError
     {
-        public ServiceResponseError(string fieldName, string errorCode, string errorMessage = "")
+        public ServiceResponseError(string fieldName, string errorCode, string errorMessage)
         {
             FieldName = fieldName;
             ErrorCode = errorCode;
