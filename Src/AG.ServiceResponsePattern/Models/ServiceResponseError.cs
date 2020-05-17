@@ -18,8 +18,8 @@
         /// strings when supplied to this class.</remarks>
         public string ErrorCode { get; set; }
 
-        /// ErrorMessage has been removed from this class. Specifying messages for users at this 
-        /// level is too rigid. The preferred approach is to keep a dictionary of error codes used
-        /// within a project so that accompanying error messages can be managed independently.
+        /// <summary>User friendly message to be displayed to a user.</summary>
+        /// <remarks>This is designed as a fallback. Clients should map the error code to tailored user messages.</remarks>
+        public string ErrorMessage { get; set; }
     }
 }
